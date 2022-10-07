@@ -1,28 +1,14 @@
 #include <stdio.h>
 
-void printMatrice(int mat[3][3]);
+void printMatrice();
 
 void printInstructions();
 
-void multiplyMatrice(int mat1[3][3], int mat2[3][3]);
+void multiplyMatrice();
 
-void matriceT(int mat1[3][3]);
+void matriceT();
 
-int matriceAdd(int mat1[3][3], int mat2[3][3])
-{
-    int finMat[3][3];
-    for (int i = 0; i < 3; i++)
-    {
-        for (int j = 0; j < 3; j++)
-        {
-            finMat[i][j] = mat1[i][j] + mat2[i][j];
-        }
-    }
-
-    printMatrice(finMat);
-
-    return -1;
-}
+int matriceAdd();
 
 void main()
 {
@@ -94,11 +80,6 @@ void main()
         printf("oh oops");
         break;
     }
-
-    // redundant constants just for calling function
-    // int a, b;
-    // a = printMatrice(matrice1);
-    // b = printMatrice(matrice2);
 }
 
 void printMatrice(int mat[3][3])
@@ -145,4 +126,20 @@ void matriceT(int mat1[3][3])
     }
 
     printMatrice(finalMat);
+}
+
+int matriceAdd(int mat1[3][3], int mat2[3][3])
+{
+    int finMat[3][3];
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            finMat[i][j] = mat1[i][j] + mat2[i][j];
+        }
+    }
+
+    printMatrice(finMat);
+
+    return -1;
 }
