@@ -43,10 +43,6 @@ void main()
         {
             printf("%s\n", em.name);
         }
-        else
-        {
-            printf("NONE");
-        }
     }
 
     char opt[1];
@@ -55,6 +51,7 @@ void main()
 
     if (opt == "y")
     {
+        printEmployees(employeeList, num_emps);
     }
 }
 
