@@ -45,13 +45,18 @@ void main()
         }
     }
 
-    char opt[1];
-    printf("Do you wish to print all employee info? (y/n) - ");
-    scanf("%s", opt);
+    int opt;
+    printf("Do you wish to print all employee info? (1 for yes) - ");
+    scanf("%d", opt);
 
-    if (opt == "y")
+    if (opt == 1)
     {
-        printEmployees(employeeList, num_emps);
+        for (int i = 0; i < num_emps; i++)
+        {
+            Employee temp = employeeList[i];
+            printf("Emp%d\nName: %s\nDesignation: %s\nGender: %s\nDate of Join: %d/%d/%d\nSalary: %d\n\n", i, temp.name, temp.designation, temp.gender, temp.DateOfJoin.day,
+                   temp.DateOfJoin.month, temp.DateOfJoin.year, temp.salary);
+        }
     }
 }
 
@@ -82,7 +87,7 @@ void printEmployees(Employee em[], int numEmps)
     for (int i = 0; i < numEmps; i++)
     {
         Employee temp = em[i];
-        printf("Name: %s\nDesignation: %s\nGender: %s\nDate of Join: %d/%d/%d\nSalary: %d\n\n", temp.name, temp.designation, temp.gender, temp.DateOfJoin.day,
+        printf("Emp%d\nName: %s\nDesignation: %s\nGender: %s\nDate of Join: %d/%d/%d\nSalary: %d\n\n", i, temp.name, temp.designation, temp.gender, temp.DateOfJoin.day,
                temp.DateOfJoin.month, temp.DateOfJoin.year, temp.salary);
     }
 }
