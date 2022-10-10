@@ -1,2 +1,3 @@
 # C
-Library of C codes
+Library of C codes for college.
+
