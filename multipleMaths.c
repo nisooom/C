@@ -1,5 +1,7 @@
 #include <stdio.h>
+#include <string.h>
 #include <math.h>
+
 
 int isPrime(int n)
 {
@@ -7,52 +9,64 @@ int isPrime(int n)
     if (n <= 1)
         return 0;
     // Check if n=2 or n=3
-    if (n == 2 || n == 3)
+    if (n == 2 || n == 3){
         return 1;
-    // Check whether n is divisible by 2 or 3
-    if (n % 2 == 0 || n % 3 == 0)
-        return 0;
-    // Check from 5 to square root of n
-    // Iterate i by (i+6)
-    for (int i = 5; i <= sqrt(n); i = i + 6)
-        if (n % i == 0 || n % (i + 2) == 0)
-            return 0;
-
-    return 1;
+	}else{
+		for(int i = 3; i < n; i++){
+			if (n%i==0){
+				return 0;
+				break;
+			}
+		}
+		return 1;
+	}
 }
 
-int main()
+void main()
 {
-    int n;
+    int n, opt;
     printf("Enter Number - ");
     scanf("%d", &n);
 
-    float sr;
-    sr = sqrt(n);
-    printf("the square root is = ");
-    printf("%.3f", sr);
-    printf("\n");
+	printf("\nEnter 1 for finding square root\nEnter 2 for finding square\nEnter 3 for finding cube\nEnter 4 for finding Factorial\nEnter 5 to check if number is prime or not\n->");
+	scanf("%d", &opt);
 
-    int sq = n * n;
-    printf("the square is = ");
-    printf("%d", sq);
-    printf("\n");
+	int sq, cb, sum;
+	double sr;
+	switch (opt)
+	{
+	case 1:
+    	sr = sqrt(n);
+    	printf("the square root is = %.3f \n", sr);
 
-    int cb = n * n * n;
-    printf("the cube is = ");
-    printf("%d", cb);
-    printf("\n");
+		break;
+	case 2:
+ 		sq = n * n;
+   		printf("the square is = %d\n", sq);
 
-    int sum = 1;
-    for (int i = 1; i < n + 1; i++)
-    {
-        sum = sum * i;
-    }
-    printf("the factorial is - %d\n", sum);
+		break;
+	case 3:
+		cb = n * n * n;
+    	printf("the cube is = %d\n", cb);
+		break;
+	case 4:
+		sum = 1;
+    
+		for (int i = 1; i < n + 1; i++)
+    	{
+        	sum = sum * i;
+    	}
 
-        if (isPrime(n) == 1)
-        printf("the number is a prime number\n");
-    else
-        printf("the number isnt prime\n");
-    return 0;
+	    printf("the factorial is - %d\n", sum);
+	case 5:
+    	if (isPrime(n) == 1){
+        	printf("the number is a prime number\n");
+		}else{
+        	printf("the number isnt prime\n");
+		}
+		break;
+	default:
+		break;
+	}
+
 }
