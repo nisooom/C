@@ -2,6 +2,7 @@
 
 void main()
 {
+    // get all numbers, initialize ans variable
     int a, b, opt;
     float ans;
 
@@ -17,6 +18,7 @@ void main()
     printf("\n ->");
     scanf("%d", &opt);
 
+    // switch statement to get what operation to use on variables
     switch (opt)
     {
     case 1:
@@ -41,6 +43,7 @@ void main()
         break;
 
     default:
+        // if number out of bounds error raised
         printf("Error Occured.");
         break;
     }
