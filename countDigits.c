@@ -14,6 +14,4 @@ void main()
         n /= 10;
         ++count;
     }
-
-    printf("%d", count);
 }
