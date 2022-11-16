@@ -47,4 +47,6 @@ void main()
         printf("Error Occured.");
         break;
     }
+
+    printf("%f", ans);
 }
