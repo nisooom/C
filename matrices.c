@@ -62,9 +62,9 @@ void main()
         break;
     case 3:
         printf("Transpose of which Matrix is to be found? - ");
-        int matOpt;
-        scanf("%d", &matOpt);
-        switch (matOpt)
+        int TOpt;
+        scanf("%d", &TOpt);
+        switch (TOpt)
         {
         case 1:
             matriceT(matrice1);
@@ -92,7 +92,7 @@ void printMatrice(int mat[3][3])
 
 void printInstructions()
 {
-    printf("For Adding the matrices press 1\nFor Multiplying the Matrices press 2 \nFor finding the Transpose of the both of the matrices press 3\n ->");
+    printf("For Adding the matrices press 1\nFor Multiplying the Matrices press 2 \nFor finding the Transpose of the matrices press 3\n ->");
 }
 
 void multiplyMatrice(int mat1[3][3], int mat2[3][3])
