@@ -2,7 +2,7 @@
 
 void num_pyramind();
 void print_instructions();
-
+void star_pascal();
 
 void main() {
 	int opt, i = 0;
@@ -17,6 +17,10 @@ void main() {
 				num_pyramind();
 				i = -1;
 				break;
+			case 2:
+				star_pascal();
+				i = -1;
+				break;
 			default:
 				printf("Oops Try Again\n");
 				break;
@@ -26,6 +30,15 @@ void main() {
 
 }
 
+void print_instructions() {
+	
+	printf("Enter 1 for Number Pyramind\n");
+	printf("Enter 2 for Star Pascal Pattern\n");
+
+
+	printf("->");
+
+}
 void num_pyramind(){
 	// 1
 	// 1 2
@@ -36,7 +49,7 @@ void num_pyramind(){
 	scanf("%d", &rows);
 	for (int i = 1; i <= rows; i ++){
 		for (int j = 0; j < i; j ++) { 
-			printf("%2d", j+1);
+			printf("%4d", j+1);
 		}
 		printf("\n");
 
@@ -46,11 +59,26 @@ void num_pyramind(){
 	
 }
 
-void print_instructions() {
+void star_pascal(){
 	
-	printf("Enter 1 for Number Pyramind\n");
-	printf("->");
+	printf("Enter number of rows -> ");
+	int rows;
+	scanf("%d", &rows);
+	
+	for (int i = 0; i < rows; i ++){
+		for (int spaces = 1; spaces <= rows - i; spaces++){
+
+		}
+
+		for (int j = 0; j <= i; j++){
+			printf("    *");
+		}
+	
+		printf("\n");
+	}
+
+}
 
 	
-}
+
 
