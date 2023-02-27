@@ -73,8 +73,8 @@ Employee addEmployee()
     printf("Enter Gender - ");
     scanf("%s", em.gender);
 
-    printf("Enter Date of Join (DD MM YYYY) - ");
-    scanf("%d%d%d", &em.DateOfJoin.day, &em.DateOfJoin.month, &em.DateOfJoin.year);
+    printf("Enter Date of Join (DD/MM/YYYY) - ");
+    scanf("%d/%d/%d", &em.DateOfJoin.day, &em.DateOfJoin.month, &em.DateOfJoin.year);
 
     printf("Enter Salary - ");
     scanf("%f", &em.salary);

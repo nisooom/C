@@ -7,14 +7,15 @@ void main()
 {
     char checkpalindrome[100];
     printf("Enter word - ");
-    gets(checkpalindrome);
+    scanf("%s", &checkpalindrome);
 
     check_palindrome(checkpalindrome);
 }
 
 void check_palindrome(char word[])
 {
-    int size = sizeof(word) / sizeof(word[0]);
+    int size = strlen(word);
+
     for (int i = 0; i < (size / 2); i++)
     {
         for (int j = size; j > (size / 2); j--)

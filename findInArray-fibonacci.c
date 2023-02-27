@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+int IsInArray();
+void printFib();
+
 void main()
 {
     int arr_length;
@@ -12,11 +15,6 @@ void main()
         printf("Enter the %d element in the array - ", i + 1);
         scanf("%d", &array[i]);
     }
-
-    // for (int i = 0; i < arr_length; i++)
-    // {
-    //     printf("Element %d is - %d\n", i + 1, array[i]);
-    // }
 
     int num_to_find;
     printf("Enter number to find in array - ");
@@ -37,6 +35,7 @@ void main()
 
     printFib(fib_num);
 }
+
 int IsInArray(int num, int arr[], int arr_length)
 {
 
@@ -50,15 +49,18 @@ int IsInArray(int num, int arr[], int arr_length)
     return 0;
 }
 
-int printFib(int num)
+void printFib(int num)
 {
-    int sum, start;
-    if (num == 1)
+
+    int t1 = 0, t2 = 1;
+
+    int nextTerm = t1 + t2;
+
+    for (int i = 1; i <= num; ++i)
     {
-        return 1;
-    }
-    if (num == 0)
-    {
-        return 0;
+        printf("%d ", nextTerm);
+        t1 = t2;
+        t2 = nextTerm;
+        nextTerm = t1 + t2;
     }
 }
