@@ -22,7 +22,7 @@ void main()
     switch (opt)
     {
     case 1:
-        ans = a + b;
+        ans += b;
         break;
     case 2:
         ans = a - b;
