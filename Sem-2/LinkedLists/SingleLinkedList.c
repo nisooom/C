@@ -1,50 +1,74 @@
+//
+// Created by nishu on 14-03-2023.
+//
 #include <stdio.h>
 #include <stdlib.h>
 
 
-//  Program to show how linked lists work 
+//  Program to show how linked lists work
 //  and the types of commands you can do on a linked list
-
-
-
-void addToFront();
-void printList();
-void display();
 
 struct Node{
     int value;
     struct Node *next;
-}*head = NULL;
+};
+
+struct Node *head;
+
+
+void display();
+void recursive(struct Node *p);
+void addToFront();
+void printList();
+void addToLast();
+void addBefore();
+void addAfter();
+void addAtIndex();
 
 
 void main(){
 
     // head->next = NULL;
-    int x = 1;
-    int opt;
+    int opt = 0;
     int newValue;
-    
 
-    while(x){
-        printf("\nEnter 1 to add");
-        printf("\n2 to print list");
-        printf("\n ->");
+
+    while(opt != 9){
+        printf("\n\tEnter\n\t1 to add in the front of the list ");
+        printf("\n\t2 to add to the back of the list");
+        printf("\n\t3 to add before an existing element in the list");
+        printf("\n\t4 to add after an existing element in the list");
+        printf("\n\t5 to add at a specific index in the list");
+        printf("\n\t8 to print the list");
+        printf("\n\tEnter 9 to Exit");
+        printf("\n ->\t");
         scanf("%d", &opt);
         switch (opt)
         {
             case 1:
-                printf("Enter New Number - ");
-                scanf("%d", &newValue);
-                addToFront(newValue);
+                addToFront();
+                break;
                 break;
             case 2:
-                // printList();
-                display(head);
+                addToLast();
                 break;
+
             case 3:
-                x = 0; 
+                addBefore();
                 break;
-        
+            case 4:
+                addAfter();
+                break;
+            case 5:
+                addAtIndex();
+                break;
+
+            case 8:
+//                printList();
+//                display(head);
+                display();
+
+            case 9:
             default:
                 break;
         }
@@ -52,43 +76,172 @@ void main(){
 
 }
 
-void addToFront(int newValue){
-    struct Node *newNode; 
+void addToFront(){
+
+    struct Node *newNode;
     newNode = (struct Node *)malloc(sizeof(struct Node));
-    newNode->value = newValue;
-    if (!head){
-        head = newNode;
+    int item;
+
+    if (newNode == NULL){
+        printf("OVERFLOW");
     }else{
+
+        printf("Enter New Value  - ");
+        scanf("%d", &item);
+        newNode -> value = item;
         newNode->next = head;
         head = newNode;
     }
 }
 
-// void printList(){
-//     Node *curr;
-//     curr = head;
-//     if (!curr){
-//         printf("Empty List");
-//     }else{
+void addToLast(){
 
-//         printf("Head\n");
-//         while (curr->next != 0){
-//             printf(" %d <->", curr->value);
-//             curr = curr->next;
-//         }
-//         printf(" End ");
-//     }
-// }
-
-void display(struct Node *p)  
-{  
-    // Node *temp;
-    // temp = (Node *)malloc(sizeof(Node));
-    while (p != NULL){
-        printf(" %d ", p->value);
-        p = p->next;
+    struct Node *newNode;
+    newNode = (struct Node *)malloc(sizeof(struct Node));
+    int item;
+    if (head == NULL){
+        addToFront();
+        return;
     }
 
-    // printf("%d", head->value);
-}     
-              
+    if (newNode == NULL){
+        printf("OVERFLOW");
+    }else{
+        printf("Enter New Value - ");
+        scanf("%d", &item);
+
+        newNode->value = item;
+        struct Node *curr;
+        curr = head;
+        while (curr->next != NULL){
+            curr = curr->next;
+        }
+
+        curr->next = newNode;
+        newNode->next = NULL;
+    }
+}
+
+
+void display()
+{
+    struct Node *ptr;
+    ptr = head;
+    if(ptr == NULL)
+    {
+        printf("Nothing to print");
+    }
+    else
+    {
+        printf("HEAD <-> ");
+        while (ptr!=NULL)
+        {
+            printf("%d <-> ",ptr->value);
+            ptr = ptr -> next;
+        }
+        printf("NULL\n");
+    }
+}
+
+void addBefore(){
+    struct Node * newNode;
+    newNode = (struct Node*)malloc(sizeof(struct Node));
+    int item, valueOfNext;
+
+    if (head == NULL){
+        addToFront();
+        return;
+    }
+
+    if (newNode == NULL){
+        printf("OVERFLOW");
+    }else{
+        printf("Enter Value - ");
+        scanf("%d", &item);
+        newNode -> value = item;
+
+        struct Node *curr;
+        curr = head;
+
+        display();
+
+        printf("Enter value to put before - ");
+        scanf("%d", &valueOfNext);
+        if (head->value == valueOfNext){
+            newNode->next = head;
+            head = newNode;
+        }else{
+            while (curr->next->value != valueOfNext){
+                curr = curr->next;
+            }
+            newNode->next = curr->next;
+            curr->next = newNode;
+        }
+
+        display();
+    }
+
+}
+
+void addAfter(){
+    if (head == NULL){
+        addToFront();
+        return;
+    }
+
+    struct Node *newNode, *curr;
+    newNode = (struct Node *)malloc(sizeof(struct Node));
+    int item, valueOfBefore;
+
+    if (newNode == NULL){
+        printf("OVERFLOW");
+    }else{
+        curr = head;
+        display();
+        printf("Enter Value to put after - ");
+        scanf("%d", &valueOfBefore);
+
+        while (curr->value != valueOfBefore){
+            curr = curr -> next;
+        }
+
+        printf("Enter Value - ");
+        scanf("%d", &newNode->value);
+        newNode->next = curr->next;
+        curr->next = newNode;
+
+    }
+
+}
+
+void addAtIndex(){
+    struct Node *newNode, *curr;
+    newNode = (struct Node *)malloc(sizeof(struct Node));
+    int item, index = 0, indexToAdd;
+
+    if (head == NULL){
+        printf("Empty List");
+    }else{
+        curr = head;
+        while(curr->next != NULL){
+            index++;
+            curr = curr->next;
+        }
+
+        printf("Index of List - %d", (index+1));
+        printf("\nWhere do you want to add the new element?");
+        printf("\n ->");
+        scanf("%d", &indexToAdd);
+
+        if (indexToAdd > (index + 1)){
+            printf("Error");
+        }else{
+
+            printf("Enter Value - ");
+            scanf("%d", &newNode->value);
+            newNode->next = curr->next;
+            curr->next = newNode;
+        }
+
+    }
+}
