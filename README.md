@@ -7,11 +7,11 @@ Data Structures Implemented -
 - [x] Stacks
     - [x] Using Array
     - [ ] Using Linked Lists
-<br>
+
 - [x] Queues
   - [x] Using Array
   - [ ] Using Linked Lists
-<br>
+
 - [x] Linked Lists
   - [x] Singly
   - [ ] Doubly
