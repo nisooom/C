@@ -1,0 +1,11 @@
+# ninja log v5
+121	241	7005985788623941	ArmstrongNumber.exe	7e3867e171e406e5
+1	166	7005986885588636	build.ninja	c74aa80ec72015a9
+98	224	6992067506833321	Salary.exe	f887e68fba591860
+97	209	6992083074265286	Stacks.exe	6b84cee3a6e4dd3b
+148	425	7005960747215949	SingleLinkedList.exe	c4e49e8120978218
+95	210	6992140949463818	LinearQ.exe	906dd4db687f2a91
+745	1019	7005170059251462	LinkedLists.exe	f8aabc25e250c02c
+1	121	7005985787454406	CMakeFiles/ArmstrongNumber.dir/JournalQuestions/armstrongNumber.c.obj	c52e353e2173afee
+2	101	7005987060806984	CMakeFiles/ArmstrongNumber.dir/JournalQuestions/armstrongNumber.c.obj	35b20d8967021e87
+102	248	7005987062210402	ArmstrongNumber.exe	7e3867e171e406e5

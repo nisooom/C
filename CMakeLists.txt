@@ -1,0 +1,24 @@
+cmake_minimum_required(VERSION 3.24)
+project(C C)
+
+set(CMAKE_C_STANDARD 11)
+
+add_executable(Stacks Stacks/stacks.c Stacks/stacks.c)
+add_executable(LinearQ Queues/LinearQ.c)
+add_executable(CircularQueue Queues/CircularQueue.c)
+add_executable(SingleLinkedList LinkedLists/SingleLinkedList.c)
+add_executable(ArmstrongNumber JournalQuestions/armstrongNumber.c)
+add_executable(Calculator JournalQuestions/calculator.c)
+add_executable(CountDigits JournalQuestions/countDigits.c)
+add_executable(FindInArray JournalQuestions/findInArray-fibonacci.c)
+add_executable(MarksCalc JournalQuestions/marks.c)
+add_executable(Matrices JournalQuestions/matrices.c)
+add_executable(MultipleMaths JournalQuestions/multipleMaths.c)
+add_executable(PascalTriangle JournalQuestions/pascalTriangle.c)
+add_executable(PatternMatching JournalQuestions/patternmatching.c)
+add_executable(QuadraticSolver JournalQuestions/quadratic_solver.c)
+add_executable(SalaryCalc JournalQuestions/salary.c)
+add_executable(StringPalindrome JournalQuestions/string_palindrome.c)
+add_executable(Structs JournalQuestions/structs.c)
+
+

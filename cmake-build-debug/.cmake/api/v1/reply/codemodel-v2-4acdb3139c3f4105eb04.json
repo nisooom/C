@@ -1,0 +1,204 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "C",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ArmstrongNumber::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ArmstrongNumber-Debug-981f68c78f3580b08914.json",
+					"name" : "ArmstrongNumber",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Calculator::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Calculator-Debug-282e50609c812309b9aa.json",
+					"name" : "Calculator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CircularQueue::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CircularQueue-Debug-0b3b6dd15bd2c990a75c.json",
+					"name" : "CircularQueue",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CountDigits::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CountDigits-Debug-dabd0d01ef9b9820ec2c.json",
+					"name" : "CountDigits",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FindInArray::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FindInArray-Debug-535b5efc441cfd0ce062.json",
+					"name" : "FindInArray",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LinearQ::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LinearQ-Debug-d5d79ca136a090e0d8ee.json",
+					"name" : "LinearQ",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MarksCalc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MarksCalc-Debug-c5cc56c80cb103e33b47.json",
+					"name" : "MarksCalc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Matrices::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Matrices-Debug-fb9757c677e5ee3c00b3.json",
+					"name" : "Matrices",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MultipleMaths::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MultipleMaths-Debug-8735d911499bb8bb783a.json",
+					"name" : "MultipleMaths",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "PascalTriangle::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PascalTriangle-Debug-67ae9a023fe5d22b08e4.json",
+					"name" : "PascalTriangle",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "PatternMatching::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PatternMatching-Debug-28183fc16bf95a27ff75.json",
+					"name" : "PatternMatching",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "QuadraticSolver::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QuadraticSolver-Debug-c5721ab0d4772e4810a4.json",
+					"name" : "QuadraticSolver",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SalaryCalc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SalaryCalc-Debug-e0ba5069f315fe046e1e.json",
+					"name" : "SalaryCalc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SingleLinkedList::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SingleLinkedList-Debug-cee36b0dc48b7ce7555b.json",
+					"name" : "SingleLinkedList",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Stacks::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Stacks-Debug-18d54f162e0ea402652a.json",
+					"name" : "Stacks",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "StringPalindrome::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-StringPalindrome-Debug-d77c6d745416d8e65bbb.json",
+					"name" : "StringPalindrome",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Structs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Structs-Debug-898693298e121aed31b0.json",
+					"name" : "Structs",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/nishu/Codes/C/Main_Project/C/cmake-build-debug",
+		"source" : "C:/Users/nishu/Codes/C/Main_Project/C"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

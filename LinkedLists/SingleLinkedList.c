@@ -14,17 +14,107 @@ struct Node{
 };
 
 struct Node *head;
+struct Node *newNode;
+struct Node *curr;
+struct Node *ptr;
 
 
 void display();
-void recursive(struct Node *p);
 void addToFront();
-void printList();
 void addToLast();
 void addBefore();
 void addAfter();
 void addAtIndex();
+void removeFromFirst();
+void removeFromLast();
+void allocateSpace();
+int printInstructions();
+int printInstructions_creation();
+int printInstructions_deletion();
 
+int printInstructions(){
+    int opt, finalOpt;
+
+    printf("\n\tEnter");
+    printf("\n\t1 to add a node");
+    printf("\n\t2 to remove a node");
+    printf("\n\t3 to print the linked list");
+    printf("\n\t4 to Exit");
+    printf("\n ->\t");
+    scanf("%d", &opt);
+
+    switch(opt){
+        case 1:
+            printInstructions_creation();
+            break;
+        case 2:
+            printInstructions_deletion();
+            break;
+        case 3:
+            display();
+            break;
+        case 4:
+            return 4;
+        default:
+            break;
+    }
+
+    return 0;
+}
+
+int printInstructions_creation(){
+    int opt;
+
+    printf("\n\t1 to add in the front of the list ");
+    printf("\n\t2 to add to the back of the list");
+    printf("\n\t3 to add before an existing element in the list");
+    printf("\n\t4 to add after an existing element in the list");
+    printf("\n\t5 to add at a specific index in the list");
+    printf("\n->");
+    scanf("%d", &opt);
+
+    switch(opt){
+        case 1:
+            addToFront();
+            break;
+        case 2:
+            addToLast();
+            break;
+        case 3:
+            addBefore();
+            break;
+        case 4:
+            addAfter();
+            break;
+        case 5:
+            addAtIndex();
+            break;
+        default:
+            break;
+    }
+
+    return 0;
+}
+
+int printInstructions_deletion(){
+    int opt;
+    printf("\n\t1 to remove node from the start of the list");
+    printf("\n\t2 to remove node from the end of the list");
+    printf("\n->");
+    scanf("%d", &opt);
+
+    switch(opt){
+        case 1:
+            removeFromFirst();
+            break;
+        case 2:
+            removeFromLast();
+            break;
+        default:
+            break;
+    }
+    return opt;
+}
 
 void main(){
 
@@ -32,54 +122,16 @@ void main(){
     int opt = 0;
     int newValue;
 
-
-    while(opt != 9){
-        printf("\n\tEnter\n\t1 to add in the front of the list ");
-        printf("\n\t2 to add to the back of the list");
-        printf("\n\t3 to add before an existing element in the list");
-        printf("\n\t4 to add after an existing element in the list");
-        printf("\n\t5 to add at a specific index in the list");
-        printf("\n\t8 to print the list");
-        printf("\n\tEnter 9 to Exit");
-        printf("\n ->\t");
-        scanf("%d", &opt);
-        switch (opt)
-        {
-            case 1:
-                addToFront();
-                break;
-                break;
-            case 2:
-                addToLast();
-                break;
-
-            case 3:
-                addBefore();
-                break;
-            case 4:
-                addAfter();
-                break;
-            case 5:
-                addAtIndex();
-                break;
-
-            case 8:
-//                printList();
-//                display(head);
-                display();
-
-            case 9:
-            default:
-                break;
-        }
+    while(opt != 4){
+        opt = printInstructions();
     }
 
 }
 
 void addToFront(){
 
-    struct Node *newNode;
-    newNode = (struct Node *)malloc(sizeof(struct Node));
+    newNode = (struct Node*)malloc(sizeof(struct Node));
+
     int item;
 
     if (newNode == NULL){
@@ -96,8 +148,8 @@ void addToFront(){
 
 void addToLast(){
 
-    struct Node *newNode;
-    newNode = (struct Node *)malloc(sizeof(struct Node));
+    newNode = (struct Node*)malloc(sizeof(struct Node));
+
     int item;
     if (head == NULL){
         addToFront();
@@ -111,7 +163,6 @@ void addToLast(){
         scanf("%d", &item);
 
         newNode->value = item;
-        struct Node *curr;
         curr = head;
         while (curr->next != NULL){
             curr = curr->next;
@@ -125,7 +176,6 @@ void addToLast(){
 
 void display()
 {
-    struct Node *ptr;
     ptr = head;
     if(ptr == NULL)
     {
@@ -144,8 +194,9 @@ void display()
 }
 
 void addBefore(){
-    struct Node * newNode;
+
     newNode = (struct Node*)malloc(sizeof(struct Node));
+
     int item, valueOfNext;
 
     if (head == NULL){
@@ -160,7 +211,6 @@ void addBefore(){
         scanf("%d", &item);
         newNode -> value = item;
 
-        struct Node *curr;
         curr = head;
 
         display();
@@ -184,13 +234,14 @@ void addBefore(){
 }
 
 void addAfter(){
+
+    newNode = (struct Node*)malloc(sizeof(struct Node));
+
     if (head == NULL){
         addToFront();
         return;
     }
 
-    struct Node *newNode, *curr;
-    newNode = (struct Node *)malloc(sizeof(struct Node));
     int item, valueOfBefore;
 
     if (newNode == NULL){
@@ -215,8 +266,9 @@ void addAfter(){
 }
 
 void addAtIndex(){
-    struct Node *newNode, *curr;
-    newNode = (struct Node *)malloc(sizeof(struct Node));
+
+    newNode = (struct Node*)malloc(sizeof(struct Node));
+
     int item, index = 0, indexToAdd;
 
     if (head == NULL){
@@ -244,4 +296,35 @@ void addAtIndex(){
         }
 
     }
+}
+
+void removeFromFirst(){
+    if (head == NULL){
+        printf("Empty List");
+        return;
+    }
+
+    int valueRemoved = head->value;
+    head = head->next;
+    printf("\nRemoved %d\n", valueRemoved);
+
+}
+
+void removeFromLast(){
+
+    if (head == NULL){
+        printf("Empty List");
+        return;
+    }
+
+    int valueRemoved;
+    curr = head;
+
+    while(curr->next->next != NULL){
+        curr = curr->next;
+    }
+    valueRemoved = curr->next->value;
+    curr->next = NULL;
+
+    printf("\nRemoved %d\n", valueRemoved);
 }
