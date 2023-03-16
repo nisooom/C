@@ -27,10 +27,10 @@ void addAfter();
 void addAtIndex();
 void removeFromFirst();
 void removeFromLast();
-void allocateSpace();
 int printInstructions();
 int printInstructions_creation();
 int printInstructions_deletion();
+void removeSpecific();
 
 int printInstructions(){
     int opt, finalOpt;
@@ -100,6 +100,7 @@ int printInstructions_deletion(){
     int opt;
     printf("\n\t1 to remove node from the start of the list");
     printf("\n\t2 to remove node from the end of the list");
+    printf("\n\t3 to remove specific node from the list");
     printf("\n->");
     scanf("%d", &opt);
 
@@ -109,6 +110,9 @@ int printInstructions_deletion(){
             break;
         case 2:
             removeFromLast();
+            break;
+        case 3:
+            removeSpecific();
             break;
         default:
             break;
@@ -267,35 +271,35 @@ void addAfter(){
 
 void addAtIndex(){
 
-    newNode = (struct Node*)malloc(sizeof(struct Node));
-
-    int item, index = 0, indexToAdd;
-
-    if (head == NULL){
-        printf("Empty List");
-    }else{
-        curr = head;
-        while(curr->next != NULL){
-            index++;
-            curr = curr->next;
-        }
-
-        printf("Index of List - %d", (index+1));
-        printf("\nWhere do you want to add the new element?");
-        printf("\n ->");
-        scanf("%d", &indexToAdd);
-
-        if (indexToAdd > (index + 1)){
-            printf("Error");
-        }else{
-
-            printf("Enter Value - ");
-            scanf("%d", &newNode->value);
-            newNode->next = curr->next;
-            curr->next = newNode;
-        }
-
-    }
+//    newNode = (struct Node*)malloc(sizeof(struct Node));
+//
+//    int item, index = 0, indexToAdd;
+//
+//    if (head == NULL){
+//        printf("Empty List");
+//    }else{
+//        curr = head;
+//        while(curr->next != NULL){
+//            index++;
+//            curr = curr->next;
+//        }
+//
+//        printf("Index of List - %d", (index+1));
+//        printf("\nWhere do you want to add the new element?");
+//        printf("\n ->");
+//        scanf("%d", &indexToAdd);
+//
+//        if (indexToAdd > (index + 1)){
+//            printf("Error");
+//        }else{
+//
+//            printf("Enter Value - ");
+//            scanf("%d", &newNode->value);
+//            newNode->next = curr->next;
+//            curr->next = newNode;
+//        }
+//
+//    }
 }
 
 void removeFromFirst(){
@@ -327,4 +331,23 @@ void removeFromLast(){
     curr->next = NULL;
 
     printf("\nRemoved %d\n", valueRemoved);
+}
+
+void removeSpecific(){
+    int valueToRemove;
+    curr = head;
+    display();
+
+    printf("Enter value to remove - ");
+    scanf("%d", &valueToRemove);
+
+    while (curr->next->value != valueToRemove){
+        curr = curr->next;
+    }
+
+    valueToRemove = curr->next->value;
+
+    curr->next = curr->next->next;
+    printf("Node removed - %d\n", valueToRemove);
+    display();
 }
