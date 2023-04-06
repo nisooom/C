@@ -31,7 +31,11 @@
 						13,
 						14,
 						15,
-						16
+						16,
+						17,
+						18,
+						19,
+						20
 					]
 				}
 			],
@@ -62,7 +66,11 @@
 						13,
 						14,
 						15,
-						16
+						16,
+						17,
+						18,
+						19,
+						20
 					]
 				}
 			],
@@ -73,6 +81,13 @@
 					"id" : "ArmstrongNumber::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-ArmstrongNumber-Debug-981f68c78f3580b08914.json",
 					"name" : "ArmstrongNumber",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BinarySearchTree::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BinarySearchTree-Debug-c3f7b490459f857286a3.json",
+					"name" : "BinarySearchTree",
 					"projectIndex" : 0
 				},
 				{
@@ -91,9 +106,23 @@
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "CircularSingly::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CircularSingly-Debug-6af5a17cbe4b64811bd0.json",
+					"name" : "CircularSingly",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "CountDigits::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-CountDigits-Debug-dabd0d01ef9b9820ec2c.json",
 					"name" : "CountDigits",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "DoublyLinkedList::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DoublyLinkedList-Debug-218db47860ff8c8f8db4.json",
+					"name" : "DoublyLinkedList",
 					"projectIndex" : 0
 				},
 				{
@@ -129,6 +158,13 @@
 					"id" : "MultipleMaths::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-MultipleMaths-Debug-8735d911499bb8bb783a.json",
 					"name" : "MultipleMaths",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ParenthesisChecker::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ParenthesisChecker-Debug-5be6accf6fc2347967b7.json",
+					"name" : "ParenthesisChecker",
 					"projectIndex" : 0
 				},
 				{

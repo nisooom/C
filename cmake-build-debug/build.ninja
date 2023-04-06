@@ -601,6 +601,138 @@ build Structs.exe: C_EXECUTABLE_LINKER__Structs_Debug CMakeFiles/Structs.dir/Jou
   TARGET_IMPLIB = libStructs.dll.a
   TARGET_PDB = Structs.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target DoublyLinkedList
+
+
+#############################################
+# Order-only phony target for DoublyLinkedList
+
+build cmake_object_order_depends_target_DoublyLinkedList: phony || CMakeFiles/DoublyLinkedList.dir
+
+build CMakeFiles/DoublyLinkedList.dir/LinkedLists/DoublyLinkedList.c.obj: C_COMPILER__DoublyLinkedList_Debug C$:/Users/nishu/Codes/C/Main_Project/C/LinkedLists/DoublyLinkedList.c || cmake_object_order_depends_target_DoublyLinkedList
+  DEP_FILE = CMakeFiles\DoublyLinkedList.dir\LinkedLists\DoublyLinkedList.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\DoublyLinkedList.dir
+  OBJECT_FILE_DIR = CMakeFiles\DoublyLinkedList.dir\LinkedLists
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target DoublyLinkedList
+
+
+#############################################
+# Link the executable DoublyLinkedList.exe
+
+build DoublyLinkedList.exe: C_EXECUTABLE_LINKER__DoublyLinkedList_Debug CMakeFiles/DoublyLinkedList.dir/LinkedLists/DoublyLinkedList.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\DoublyLinkedList.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = DoublyLinkedList.exe
+  TARGET_IMPLIB = libDoublyLinkedList.dll.a
+  TARGET_PDB = DoublyLinkedList.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target CircularSingly
+
+
+#############################################
+# Order-only phony target for CircularSingly
+
+build cmake_object_order_depends_target_CircularSingly: phony || CMakeFiles/CircularSingly.dir
+
+build CMakeFiles/CircularSingly.dir/LinkedLists/Circular_SinglyLinkedList.c.obj: C_COMPILER__CircularSingly_Debug C$:/Users/nishu/Codes/C/Main_Project/C/LinkedLists/Circular_SinglyLinkedList.c || cmake_object_order_depends_target_CircularSingly
+  DEP_FILE = CMakeFiles\CircularSingly.dir\LinkedLists\Circular_SinglyLinkedList.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\CircularSingly.dir
+  OBJECT_FILE_DIR = CMakeFiles\CircularSingly.dir\LinkedLists
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target CircularSingly
+
+
+#############################################
+# Link the executable CircularSingly.exe
+
+build CircularSingly.exe: C_EXECUTABLE_LINKER__CircularSingly_Debug CMakeFiles/CircularSingly.dir/LinkedLists/Circular_SinglyLinkedList.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\CircularSingly.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = CircularSingly.exe
+  TARGET_IMPLIB = libCircularSingly.dll.a
+  TARGET_PDB = CircularSingly.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target ParenthesisChecker
+
+
+#############################################
+# Order-only phony target for ParenthesisChecker
+
+build cmake_object_order_depends_target_ParenthesisChecker: phony || CMakeFiles/ParenthesisChecker.dir
+
+build CMakeFiles/ParenthesisChecker.dir/Stacks/ParenthesisChecker.c.obj: C_COMPILER__ParenthesisChecker_Debug C$:/Users/nishu/Codes/C/Main_Project/C/Stacks/ParenthesisChecker.c || cmake_object_order_depends_target_ParenthesisChecker
+  DEP_FILE = CMakeFiles\ParenthesisChecker.dir\Stacks\ParenthesisChecker.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ParenthesisChecker.dir
+  OBJECT_FILE_DIR = CMakeFiles\ParenthesisChecker.dir\Stacks
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target ParenthesisChecker
+
+
+#############################################
+# Link the executable ParenthesisChecker.exe
+
+build ParenthesisChecker.exe: C_EXECUTABLE_LINKER__ParenthesisChecker_Debug CMakeFiles/ParenthesisChecker.dir/Stacks/ParenthesisChecker.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\ParenthesisChecker.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = ParenthesisChecker.exe
+  TARGET_IMPLIB = libParenthesisChecker.dll.a
+  TARGET_PDB = ParenthesisChecker.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target BinarySearchTree
+
+
+#############################################
+# Order-only phony target for BinarySearchTree
+
+build cmake_object_order_depends_target_BinarySearchTree: phony || CMakeFiles/BinarySearchTree.dir
+
+build CMakeFiles/BinarySearchTree.dir/BinarySearchTree/Main.c.obj: C_COMPILER__BinarySearchTree_Debug C$:/Users/nishu/Codes/C/Main_Project/C/BinarySearchTree/Main.c || cmake_object_order_depends_target_BinarySearchTree
+  DEP_FILE = CMakeFiles\BinarySearchTree.dir\BinarySearchTree\Main.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\BinarySearchTree.dir
+  OBJECT_FILE_DIR = CMakeFiles\BinarySearchTree.dir\BinarySearchTree
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target BinarySearchTree
+
+
+#############################################
+# Link the executable BinarySearchTree.exe
+
+build BinarySearchTree.exe: C_EXECUTABLE_LINKER__BinarySearchTree_Debug CMakeFiles/BinarySearchTree.dir/BinarySearchTree/Main.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\BinarySearchTree.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = BinarySearchTree.exe
+  TARGET_IMPLIB = libBinarySearchTree.dll.a
+  TARGET_PDB = BinarySearchTree.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -629,11 +761,17 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build ArmstrongNumber: phony ArmstrongNumber.exe
 
+build BinarySearchTree: phony BinarySearchTree.exe
+
 build Calculator: phony Calculator.exe
 
 build CircularQueue: phony CircularQueue.exe
 
+build CircularSingly: phony CircularSingly.exe
+
 build CountDigits: phony CountDigits.exe
+
+build DoublyLinkedList: phony DoublyLinkedList.exe
 
 build FindInArray: phony FindInArray.exe
 
@@ -644,6 +782,8 @@ build MarksCalc: phony MarksCalc.exe
 build Matrices: phony Matrices.exe
 
 build MultipleMaths: phony MultipleMaths.exe
+
+build ParenthesisChecker: phony ParenthesisChecker.exe
 
 build PascalTriangle: phony PascalTriangle.exe
 
@@ -669,7 +809,7 @@ build Structs: phony Structs.exe
 #############################################
 # Folder: C:/Users/nishu/Codes/C/Main_Project/C/cmake-build-debug
 
-build all: phony Stacks.exe LinearQ.exe CircularQueue.exe SingleLinkedList.exe ArmstrongNumber.exe Calculator.exe CountDigits.exe FindInArray.exe MarksCalc.exe Matrices.exe MultipleMaths.exe PascalTriangle.exe PatternMatching.exe QuadraticSolver.exe SalaryCalc.exe StringPalindrome.exe Structs.exe
+build all: phony Stacks.exe LinearQ.exe CircularQueue.exe SingleLinkedList.exe ArmstrongNumber.exe Calculator.exe CountDigits.exe FindInArray.exe MarksCalc.exe Matrices.exe MultipleMaths.exe PascalTriangle.exe PatternMatching.exe QuadraticSolver.exe SalaryCalc.exe StringPalindrome.exe Structs.exe DoublyLinkedList.exe CircularSingly.exe ParenthesisChecker.exe BinarySearchTree.exe
 
 # =============================================================================
 # Built-in targets

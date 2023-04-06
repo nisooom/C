@@ -15,5 +15,9 @@ C:/Users/nishu/Codes/C/Main_Project/C/cmake-build-debug/CMakeFiles/QuadraticSolv
 C:/Users/nishu/Codes/C/Main_Project/C/cmake-build-debug/CMakeFiles/SalaryCalc.dir
 C:/Users/nishu/Codes/C/Main_Project/C/cmake-build-debug/CMakeFiles/StringPalindrome.dir
 C:/Users/nishu/Codes/C/Main_Project/C/cmake-build-debug/CMakeFiles/Structs.dir
+C:/Users/nishu/Codes/C/Main_Project/C/cmake-build-debug/CMakeFiles/DoublyLinkedList.dir
+C:/Users/nishu/Codes/C/Main_Project/C/cmake-build-debug/CMakeFiles/CircularSingly.dir
+C:/Users/nishu/Codes/C/Main_Project/C/cmake-build-debug/CMakeFiles/ParenthesisChecker.dir
+C:/Users/nishu/Codes/C/Main_Project/C/cmake-build-debug/CMakeFiles/BinarySearchTree.dir
 C:/Users/nishu/Codes/C/Main_Project/C/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/nishu/Codes/C/Main_Project/C/cmake-build-debug/CMakeFiles/rebuild_cache.dir

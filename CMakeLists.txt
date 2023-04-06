@@ -20,5 +20,7 @@ add_executable(QuadraticSolver JournalQuestions/quadratic_solver.c)
 add_executable(SalaryCalc JournalQuestions/salary.c)
 add_executable(StringPalindrome JournalQuestions/string_palindrome.c)
 add_executable(Structs JournalQuestions/structs.c)
-
-
+add_executable(DoublyLinkedList LinkedLists/DoublyLinkedList.c)
+add_executable(CircularSingly LinkedLists/Circular_SinglyLinkedList.c)
+add_executable(ParenthesisChecker Stacks/ParenthesisChecker.c)
+add_executable(BinarySearchTree BinarySearchTree/Main.c)
