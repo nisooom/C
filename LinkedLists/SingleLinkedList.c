@@ -38,7 +38,7 @@ int printInstructions(){
     printf("\n\tEnter");
     printf("\n\t1 to add a node");
     printf("\n\t2 to remove a node");
-    printf("\n\t3 to print the linked list");
+    printf("\n\t3 to printInOrder the linked list");
     printf("\n\t4 to Exit");
     printf("\n ->\t");
     scanf("%d", &opt);
@@ -183,7 +183,7 @@ void display()
     ptr = head;
     if(ptr == NULL)
     {
-        printf("Nothing to print");
+        printf("Nothing to printInOrder");
     }
     else
     {

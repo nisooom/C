@@ -46,7 +46,7 @@ void main()
     }
 
     int opt;
-    printf("Do you wish to print all employee info? (1 for yes) - ");
+    printf("Do you wish to printInOrder all employee info? (1 for yes) - ");
     scanf("%d", opt);
 
     if (opt == 1)

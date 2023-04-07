@@ -25,7 +25,7 @@ int main(){
     while (opt!= 9){
         printf("\nEnter 1 to add to front of the list");
         printf("\nEnter 2 to add to the end of the list");
-        printf("\nEnter 3 to print the list");
+        printf("\nEnter 3 to printInOrder the list");
         printf("\nEnter 9 to exit");
         printf("\n\t->");
         scanf("%d", &opt);
