@@ -1,96 +1,136 @@
 //
 // Created by nishu on 06-04-2023.
 //
-#if 1
+
 #include <stdio.h>
 #include <stdlib.h>
-#endif
 
-typedef struct branch{
+// Define a branch data structure
+typedef struct branch {
     int value;
     struct branch *left;
     struct branch *right;
-}branch;
+} branch;
 
-branch *root;
-branch *newBranch;
-branch *curr;
+// Declare global variables
+branch *root; // Root of the binary search tree
+branch *newBranch; // Pointer to a new branch that will be created
+branch *curr; // Current branch when traversing the tree
 
-branch* createNewBranch();
-void addBranch();
-void print();
-void printInstructions();
-
-branch* createNewBranch() {
-    newBranch = (branch *) malloc(sizeof(branch));
+// Create a new branch with user input value
+branch *createNewBranch() {
+    newBranch = (branch *) malloc(sizeof(branch)); // Allocate memory for the new branch
     printf("Enter Value - ");
     scanf("%d", &newBranch->value);
 
-    if (newBranch == NULL){
+    // If the new branch is NULL, there is an overflow error
+    if (newBranch == NULL) {
         printf("Overflow");
         return NULL;
     }
 
-    newBranch -> left = NULL;
-    newBranch -> right = NULL;
+    // Set left and right pointers of the new branch to NULL
+    newBranch->left = NULL;
+    newBranch->right = NULL;
     return newBranch;
 }
 
-void addBranch(){
-    newBranch = createNewBranch();
-    if (newBranch == NULL) {
+// Add a new branch to the binary search tree
+void addBranch() {
+    newBranch = createNewBranch(); // Create a new branch
+    if (newBranch == NULL) { // If there is an error creating the new branch, exit the function
         printf("Error Occurred");
         return;
     }
 
-    if (root == NULL){
+    // If the root is NULL, initialize the tree with the new root
+    if (root == NULL) {
         printf("Initialized Tree with new root - %d", newBranch->value);
         root = newBranch;
         return;
     }
 
+    // Traverse the tree to find the last point where to add the new branch
     curr = root;
     branch *previous = curr;
 
-//  Loop to reach the last point where to add the new branch
-    while (curr != NULL){
+    while (curr != NULL) {
         previous = curr;
-        if (newBranch->value > curr->value){
+        if (newBranch->value > curr->value) {
             curr = curr->right;
-        }else {
+        } else {
             curr = curr->left;
         }
     }
 
-//  Adding the value after finding the last branch.
+    // Add the value after finding the last branch
+    (newBranch->value > previous->value) ? (previous->right = newBranch) : (previous->left = newBranch);
 
-    (newBranch->value > previous->value) ? (previous -> right = newBranch) : (previous->left = newBranch);
+    // One-liner if statement for above code
+    // if (newBranch->value > previous->value){
+    //     previous -> right = newBranch;
+    // } else {
+    //     previous -> left = newBranch;
+    // }
+
     printf("New branch added = %d", newBranch->value);
-//    if (newBranch->value > previous->value){
-//        previous -> right = newBranch;
-//    }else{
-//        previous -> left = newBranch;
-//    }
-
 }
 
-void printInOrder(branch *pBranch){
-    if (pBranch == NULL)
-    {
+// Print the tree in-order traversal
+void printInOrder(branch *b) {
+    if (b == NULL) { // If the tree is empty, print a message and exit the function
+        printf("Empty Tree");
         return;
     }
-    printInOrder(pBranch->left);
-    printf("%d ", pBranch->value);
-    printInOrder(pBranch->right);
+
+    // Traverse the left subtree
+    printInOrder(b->left);
+
+    // Print the current node
+    printf("%d ", b->value);
+
+    // Traverse the right subtree
+    printInOrder(b->right);
 }
 
-void printInstructions(){
+// Print the tree pre-order traversal
+void printPreOrder(branch *b) {
+    if (b == NULL) { // If the tree is empty, print a message and exit the function
+        printf("Empty Tree");
+        return;
+    }
+
+    // Print the current node
+    printf("%d ", b->value);
+    // Traverse the left subtree
+    printPreOrder(b->left);
+    // Traverse the right subtree
+    printPreOrder(b->right);
+}
+
+// Print the tree post-order traversal
+void printPostOrder(branch *b) {
+    if (b == NULL) {
+        printf("Empty Tree");
+        return;
+    }
+//    Traverse the sub trees
+    printPostOrder(b->left);
+    printPostOrder(b->right);
+//    print current branch value
+    printf("%d ", b->value);
+
+}
+
+void printInstructions() {
     printf("\nEnter 1 to add node to branch");
     printf("\nEnter 2 to printInOrder tree");
     printf("\nEnter 3 to quit");
 }
 
-void loopMain(){
+void loopMain() {
+//    Just to keep the main function clean
+
     int option = 0;
 
     do {
@@ -98,7 +138,7 @@ void loopMain(){
         printf("\n\t-> ");
         scanf("%d", &option);
 
-        switch(option){
+        switch (option) {
             case 1:
                 addBranch();
                 break;
@@ -111,12 +151,12 @@ void loopMain(){
                 break;
         }
 
-    }while (option != 3);
+    } while (option != 3);
 
 
 }
 
-int main(){
+int main() {
 
     loopMain();
 
