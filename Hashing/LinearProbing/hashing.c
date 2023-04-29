@@ -11,6 +11,7 @@
 
 int hashTable[HASHSIZE] = {0};
 int sizeList = 0;
+int collisions = 0;
 
 int hash(int value);
 void addValue(int value);
@@ -56,6 +57,7 @@ int main(){
                 removeValue(val);
                 break;
             case EXITCHOICE:
+                printf("\n\n%d\n\n", collisions);
                 choice = EXITCHOICE;
                 break;
             default:
@@ -91,6 +93,7 @@ void addValue(int value){
             }
             if (hashTable[tmpkey] != 0){
                 tmpkey++;
+                collisions++;
             }else{
                 hashTable[tmpkey] = value;
                 sizeList++;
