@@ -29,5 +29,5 @@ add_executable(Hashing Hashing/LinearProbing/hashing.c)
 add_executable(QuadraticProbing Hashing/QuadraticProbing/QuadraticProbing.c)
 add_executable(Graphs Graphs/graphs.c)
 add_executable(Singly LinkedLists/singly_prac.c)
-add_executable(Series JournalQuestions/series.c
-        )
+add_executable(Series JournalQuestions/series.c)
+add_executable(TowerOfHanoi TowerOfHanoi/ToH.c)
