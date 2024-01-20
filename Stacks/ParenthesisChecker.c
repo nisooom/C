@@ -53,9 +53,7 @@ int main(){
     printf("Enter Parenthesis - ");
     scanf("%[^\n]%*c", p_list);
 
-    for (int i = 0; i < (sizeof (p_list)/ sizeof(p_list[0])); i++){
-        push(p_list[i]);
-    }
+
 
 
 
